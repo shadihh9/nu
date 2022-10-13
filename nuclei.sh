@@ -1,6 +1,8 @@
 #! /bin/bash
+a=domin
+read a
 #sub enum with subfinder
-subfinder -d $1 | tee -a ~/domain.txt
+subfinder -d $a | tee -a ~/domain.txt
 # alive website with httpx
 cat ~/domain.txt | httpx -o  ~/alive.txt
 # scan with nuclei
